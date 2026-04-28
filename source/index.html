@@ -2,16 +2,63 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header">
+      <figure class="header__logo logo">
+        <a class="logo__link" href="/">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-large.svg" width="170" height="36">
+            <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-medium.svg" width="82" height="36">
+            <img class="logo__image" src="images/logo-small.svg" width="32" height="36" alt="Логотип сайта">
+          </picture>
+        </a>
+        <figcaption class="logo__caption">
+          Интернет-магазин кофейных напитков
+        </figcaption>
+      </figure>
+      <nav class="header__navigation page-navigation">
+        <button class="page-navigation__burger" type="button">
+          <span class="visually-hidden">
+            Открыть меню навигации
+          </span>
+        </button>
+        <ul class="page-navigation__list">
+          <li class="page-navigation__item">
+            <a class="page-navigation__link page-navigation__link--active" href="/" aria-current="page">Главная</a>
+          </li>
+          <li class="page-navigation__item">
+            <a class="page-navigation__link" href="#">Каталог</a>
+          </li>
+          <li class="page-navigation__item">
+            <a class="page-navigation__link" href="#">Доставка</a>
+          </li>
+          <li class="page-navigation__item">
+            <a class="page-navigation__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header__action header__action--login" href="#">
+          <span class="header__action-caption">
+            Войти
+          </span>
+        </a>
+        <a class="header__action header__action--cart" href="#">
+          <span class="header__action-caption">
+            Корзина
+          </span>
+        </a>
+      </div>
+    </header>
     <main>
-      <h1>Страница для старта</h1>
+      <h1 class="visually-hidden">Главная страница <span lang="en">Drink To Go</span></h1>
     </main>
+    <footer></footer>
   </body>
 </html>
