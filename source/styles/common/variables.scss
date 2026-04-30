@@ -1,1 +1,14 @@
-/* здесь используйте глобальные переменные */
+$primary-font: "Montserrat";
+$ff-primary: $primary-font, Arial, sans-serif;
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$clr-black: #333333;
+$clr-primary: #7859cf;
+$clr-primary-lighter: #9070ec;
+$clr-primary-darker: #593cac;
+$clr-secondary: #f0ebff;
+
+$clr-base-font: $clr-black;

@@ -1,7 +1,10 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@use "./common/variables.scss";
+@use "./common/global.scss";
+@use "./common/fonts.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@use "./blocks/header.scss";
+@use "./blocks/logo.scss";
+@use "./blocks/page-navigation.scss";
+@use "./blocks/visually-hidden.scss";
