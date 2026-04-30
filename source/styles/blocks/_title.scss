@@ -1,0 +1,33 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.title {
+  @include mixins.primary-font;
+  text-align: center;
+}
+
+.title__main {
+  margin-block: 0 4px;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.title__sub {
+  margin-block: 0;
+
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .title__sub {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

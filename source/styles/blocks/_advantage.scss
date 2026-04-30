@@ -1,0 +1,73 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.advantage {
+  padding-block-start: 66px;
+
+  @include mixins.primary-font;
+  text-align: center;
+
+  background-position: top 0 center;
+  background-size: 52px 56px;
+  background-repeat: no-repeat;
+}
+
+.advantage--speed {
+  background-image: url("../../icons/stack.svg#watch");
+}
+
+.advantage--convenience {
+  background-image: url("../../icons/stack.svg#shield");
+}
+
+.advantage--cheerfulness {
+  background-image: url("../../icons/stack.svg#lightning");
+}
+
+.advantage--eco {
+  background-image: url("../../icons/stack.svg#leaf");
+}
+
+.advantage__title {
+  margin-block: 0 4px;
+
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.advantage__text {
+  margin: 0;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .advantage {
+    padding-block-start: 0;
+    padding-inline-start: 72px;
+
+    text-align: start;
+    background-position: top 4px left 0;
+  }
+
+  .advantage__title {
+    margin-block-end: 10px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .advantage__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .advantage {
+    padding-block-start: 76px;
+    padding-inline-start: 0;
+
+    text-align: center;
+    background-position: top 0 center;
+  }
+}
