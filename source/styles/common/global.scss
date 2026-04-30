@@ -1,1 +1,28 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+@use "./variables.scss";
+
+:root {
+  --ff-primary: #{variables.$ff-primary};
+
+  --mobile-width: #{variables.$mobile-width};
+  --tablet-width: #{variables.$tablet-width};
+  --desktop-width: #{variables.$desktop-width};
+
+  --clr-black: #{variables.$clr-black};
+  --clr-primary: #{variables.$clr-primary};
+  --clr-primary-lighter: #{variables.$clr-primary-lighter};
+  --clr-primary-darker: #{variables.$clr-primary-darker};
+  --clr-secondary: #{variables.$clr-secondary};
+
+  --clr-base-font: #{variables.$clr-base-font};
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  margin: 0;
+
+  font-family: var(--ff-primary);
+}

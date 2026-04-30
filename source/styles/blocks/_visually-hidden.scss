@@ -1,0 +1,5 @@
+@use "../common/mixins.scss";
+
+.visually-hidden {
+  @include mixins.visually-hidden;
+}

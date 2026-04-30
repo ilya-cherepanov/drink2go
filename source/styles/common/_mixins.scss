@@ -1,0 +1,44 @@
+@use "./variables.scss";
+
+@mixin primary-font(
+  $font-family: var(--ff-primary, #{variables.$ff-primary}),
+  $font-size: 14px,
+  $line-height: 20px,
+  $font-weight: 400,
+  $color: var(--clr-base-font, #{variables.$clr-base-font}),
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin reset-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin visually-hidden($hidden: true) {
+  @if $hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @else {
+    position: unset;
+    width: unset;
+    height: unset;
+    margin: unset;
+    padding: unset;
+    border: unset;
+    clip: unset;
+    overflow: unset;
+  }
+}

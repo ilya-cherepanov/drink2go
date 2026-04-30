@@ -1,0 +1,41 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.logo {
+  margin: 0;
+}
+
+.logo__link:is(:hover, :focus-visible) {
+  filter: opacity(0.8);
+}
+
+.logo__link:active {
+  filter: opacity(0.6);
+}
+
+.logo__caption {
+  @include mixins.visually-hidden;
+}
+
+.logo__image {
+  display: block;
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .logo {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  .logo__caption {
+    @include mixins.visually-hidden(false);
+
+    max-inline-size: 126px;
+
+    @include mixins.primary-font(
+      $font-size: 12px,
+      $line-height: 16px,
+    );
+  }
+}
