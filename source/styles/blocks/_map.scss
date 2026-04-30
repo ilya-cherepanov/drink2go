@@ -1,0 +1,41 @@
+@use "../common/variables.scss";
+
+.map {
+  position: relative;
+
+  min-block-size: 420px;
+}
+
+.map__image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.map__image {
+  display: block;
+  inline-size: 100%;
+
+  object-fit: cover;
+}
+
+.map__pin {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+
+  display: block;
+
+  transform: translate(-10%, -50%);
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .map {
+    min-block-size: 480px;
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .map {
+    min-block-size: 540px;
+  }
+}
