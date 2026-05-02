@@ -1,0 +1,81 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 141px;
+  column-gap: 20px;
+  padding-inline: 20px;
+  padding-block: 40px 20px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.product__title-link {
+  grid-column: 1 / -1;
+  margin-block-end: 4px;
+
+  @include mixins.primary-font(
+    $font-size: 18px,
+    $line-height: 32px,
+    $font-weight: 700,
+  );
+  text-decoration: none;
+}
+
+.product__title {
+  margin-block: 0;
+}
+
+.product__image-link {
+  order: -1;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-block-end: 24px;
+}
+
+.product__image {
+  display: block;
+}
+
+:is(.product__title-link, .product__image-link):is(:hover, :focus-visible) {
+  filter: opacity(0.8);
+}
+
+:is(.product__title-link, .product__image-link):active {
+  filter: opacity(0.6);
+}
+
+.product__description {
+  grid-column: 1 / -1;
+  margin-block: 0 16px;
+
+  @include mixins.primary-font;
+}
+
+.product__price {
+  margin: 0;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .product {
+    padding-inline: 30px;
+    padding-block: 50px 30px;
+  }
+
+  .product__title-link {
+    margin-block-end: 10px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .product__image-link {
+    margin-block-end: 30px;
+  }
+
+  .product__description {
+    margin-block-end: 20px;
+  }
+}

@@ -11,6 +11,10 @@
   --tablet-padding: #{variables.$tablet-padding};
   --desktop-padding: #{variables.$desktop-padding};
 
+  --content-mobile-width: calc(var(--mobile-width) - 2 * var(--mobile-padding));
+  --content-tablet-width: calc(var(--tablet-width) - 2 * var(--tablet-padding));
+  --content-desktop-width: calc(var(--desktop-width) - 2 * var(--desktop-padding));
+
   --clr-black: #{variables.$clr-black};
   --clr-primary: #{variables.$clr-primary};
   --clr-primary-lighter: #{variables.$clr-primary-lighter};

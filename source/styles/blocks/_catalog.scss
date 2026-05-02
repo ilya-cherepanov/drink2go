@@ -1,0 +1,47 @@
+@use "../common/variables.scss";
+
+.catalog {
+  padding-block: 50px 44px;
+
+  background-color: #f8f8f8;
+}
+
+.catalog__title {
+  inline-size: var(--content-mobile-width, #{variables.$content-mobile-width});
+  margin-inline: auto;
+  margin-block-end: 20px;
+}
+
+.catalog__products {
+  inline-size: var(--content-mobile-width, #{variables.$content-mobile-width});
+  margin-inline: auto;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .catalog {
+    padding-block: 80px 90px;
+  }
+
+  .catalog__title {
+    inline-size: var(--content-tablet-width, #{variables.$content-tablet-width});
+  }
+
+  .catalog__products {
+    inline-size: var(--content-tablet-width, #{variables.$content-tablet-width});
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .catalog {
+    padding-block: 100px 120px;
+  }
+
+  .catalog__title {
+    inline-size: var(--content-desktop-width, #{variables.$content-desktop-width});
+    margin-block-end: 40px;
+  }
+
+  .catalog__products {
+    inline-size: var(--content-desktop-width, #{variables.$content-desktop-width});
+  }
+}

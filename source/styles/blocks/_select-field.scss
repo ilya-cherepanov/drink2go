@@ -1,0 +1,54 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.select-field {
+  display: grid;
+  grid-template-columns: auto minmax(60%, 1fr);
+  gap: 8px;
+  align-items: center;
+
+  @include mixins.primary-font(
+    $font-size: 16px,
+    $line-height: 24px,
+    $font-weight: 600,
+  );
+}
+
+.select-field__input {
+  padding-block: 4px;
+  padding-inline: 10px 30px;
+
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: lowercase;
+  color: var(--clr-primary, #{variables.$clr-primary});
+
+  border: 0;
+  border-radius: 4px;
+  appearance: none;
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#arrow-down-s");
+  background-repeat: no-repeat;
+  background-position: top 14px right 10px;
+  background-size: 10px 6px;
+}
+
+.select-field__input:is(:hover, :focus-visible) {
+  background-color: var(--clr-secondary, #{variables.$clr-secondary});
+}
+
+.select-field__input:focus-visible {
+  outline: transparent;
+}
+
+.select-field__input:open {
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#arrow-up-s");
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .select-field {
+    gap: 10px;
+  }
+}
