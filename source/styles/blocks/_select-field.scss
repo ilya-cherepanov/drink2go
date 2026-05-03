@@ -6,6 +6,7 @@
   grid-template-columns: auto minmax(60%, 1fr);
   gap: 8px;
   align-items: center;
+  padding-inline-start: 3px;
 
   @include mixins.primary-font(
     $font-size: 16px,
@@ -15,9 +16,11 @@
 }
 
 .select-field__input {
+  inline-size: 165px;
   padding-block: 4px;
   padding-inline: 10px 30px;
 
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
@@ -32,6 +35,7 @@
   background-repeat: no-repeat;
   background-position: top 14px right 10px;
   background-size: 10px 6px;
+  cursor: pointer;
 }
 
 .select-field__input:is(:hover, :focus-visible) {
@@ -45,6 +49,14 @@
 .select-field__input:open {
   background-color: transparent;
   background-image: url("../../icons/stack.svg#arrow-up-s");
+}
+
+.select-field__input:disabled,
+.select-field__input:disabled:hover {
+  background-image: url("../../icons/stack.svg#arrow-down-s-grey");
+  color: #bdbdbd;
+  background-color: transparent;
+  cursor: default;
 }
 
 @media (min-width: #{variables.$tablet-width}) {

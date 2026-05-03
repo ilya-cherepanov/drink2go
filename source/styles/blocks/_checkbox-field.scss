@@ -1,0 +1,76 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.checkbox-field {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+
+.checkbox-field__input {
+  position: relative;
+
+  min-inline-size: 42px;
+  min-block-size: 24px;
+  margin: 0;
+
+  background-color: #bdbdbd;
+  border: 2px solid #bdbdbd;
+  border-radius: 12px;
+  appearance: none;
+}
+
+.checkbox-field__input::before {
+  content: "";
+
+  position: absolute;
+
+  display: block;
+  inline-size: 20px;
+  block-size: 20px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.checkbox-field__input:checked {
+  border-color: var(--clr-primary, #{variables.$clr-primary});
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.checkbox-field__input:checked::before {
+  transform: translateX(18px);
+}
+
+.checkbox-field__input:focus-visible {
+  outline: transparent;
+}
+
+.checkbox-field__input:is(:hover, :focus-visible) {
+  border-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+  background-color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+}
+
+.checkbox-field__input:disabled {
+  border-color: #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+.checkbox-field__input:disabled::before {
+  background-color: #f8f8f8;
+}
+
+.checkbox-field__input:disabled:checked::before {
+  background-color: #bdbdbd;
+}
+
+.checkbox-field__label {
+  @include mixins.primary-font(
+    $font-size: 16px,
+    $line-height: 24px,
+  );
+}
+
+.checkbox-field__input:disabled ~ .checkbox-field__label {
+  color: #e2e2e2;
+}

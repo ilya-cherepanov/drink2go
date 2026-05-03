@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="vendor/nouislider/nouislider.min.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </head>
 
@@ -94,77 +95,77 @@
           <p class="title__sub">Каталог кофейных напитков</p>
         </hgroup>
 
-        <section class="catalog__filter filters">
+        <section class="catalog__filters filters">
           <h3 class="visually-hidden">Фильтры</h3>
 
           <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="field-group">
+            <fieldset class="filters__field-group field-group">
               <legend class="field-group__legend">Цена</legend>
-              <div class="slider-field">
-                <div class="slider"></div>
-                <div class="slider-field__inputs">
-                  <div class="slider-field__from text-input">
-                    <input class="text-input" type="number" name="price-from" id="price-from" placeholder="0">
-                    <label class="visually-hidden" for="price-from">От</label>
-                  </div>
-                  <div class="slider-field__to text-input">
-                    <input class="text-input" type="number" name="price-to" id="price-to" placeholder="1000">
-                    <label class="visually-hidden" for="price-to">До</label>
-                  </div>
+              <div class="range">
+                <div class="range__input dual-range"></div>
+                <div class="range__from text-field">
+                  <input class="text-field__input" type="number" name="price-from" id="price-from" placeholder="0">
+                  <label class="visually-hidden" for="price-from">От</label>
+                </div>
+                <div class="range__to text-field">
+                  <input class="text-field__input" type="number" name="price-to" id="price-to" placeholder="1000" value="900">
+                  <label class="visually-hidden" for="price-to">До</label>
                 </div>
               </div>
             </fieldset>
 
-            <fieldset class="field-group">
+            <fieldset class="filters__field-group field-group">
               <legend class="field-group__legend">Наличие молока</legend>
               <ul class="field-group__list">
                 <li class="field-group__item radio-field">
                   <input class="radio-field__input" type="radio" name="milk" id="milk-doesnt-matter" value="doesnt-matter" checked>
-                  <label class="radio-field__label label" for="milk-doesnt-matter">Неважно</label>
+                  <label class="radio-field__label" for="milk-doesnt-matter">Неважно</label>
                 </li>
                 <li class="field-group__item radio-field">
                   <input class="radio-field__input" type="radio" name="milk" id="milk-animal" value="animal">
-                  <label class="radio-field__label label" for="milk-animal">Только животное</label>
+                  <label class="radio-field__label" for="milk-animal">Только животное</label>
                 </li>
                 <li class="field-group__item radio-field">
                   <input class="radio-field__input" type="radio" name="milk" id="milk-plant" value="plant">
-                  <label class="radio-field__label label" for="milk-plant">Только растительное</label>
+                  <label class="radio-field__label" for="milk-plant">Только растительное</label>
                 </li>
                 <li class="field-group__item radio-field">
                   <input class="radio-field__input" type="radio" name="milk" id="milk-without" value="without" disabled>
-                  <label class="radio-field__label label" for="milk-without">Без молока</label>
+                  <label class="radio-field__label" for="milk-without">Без молока</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="field-group">
+            <fieldset class="filters__field-group field-group">
               <legend class="field-group__legend">Страна произрастания</legend>
               <ul class="field-group__list">
                 <li class="field-group__item checkbox-field">
                   <input class="checkbox-field__input" type="checkbox" name="origin" id="origin-brazil" value="brazil" checked>
-                  <label class="checkbox-field__label label" for="origin-brazil">Бразилия</label>
+                  <label class="checkbox-field__label" for="origin-brazil">Бразилия</label>
                 </li>
                 <li class="field-group__item checkbox-field">
                   <input class="checkbox-field__input" type="checkbox" name="origin" id="origin-ethiopia" value="ethiopia">
-                  <label class="checkbox-field__label label" for="origin-ethiopia">Эфиопия</label>
+                  <label class="checkbox-field__label" for="origin-ethiopia">Эфиопия</label>
                 </li>
                 <li class="field-group__item checkbox-field">
                   <input class="checkbox-field__input" type="checkbox" name="origin" id="origin-colombia" value="colombia">
-                  <label class="checkbox-field__label label" for="origin-colombia">Колумбия</label>
+                  <label class="checkbox-field__label" for="origin-colombia">Колумбия</label>
                 </li>
                 <li class="field-group__item checkbox-field">
                   <input class="checkbox-field__input" type="checkbox" name="origin" id="origin-costa-rica" value="costa-rica">
-                  <label class="checkbox-field__label label" for="origin-costa-rica">Коста-Рика</label>
+                  <label class="checkbox-field__label" for="origin-costa-rica">Коста-Рика</label>
                 </li>
                 <li class="field-group__item checkbox-field">
                   <input class="checkbox-field__input" type="checkbox" name="origin" id="origin-peru" value="peru" disabled>
-                  <label class="checkbox-field__label label" for="origin-peru">Перу</label>
+                  <label class="checkbox-field__label" for="origin-peru">Перу</label>
                 </li>
               </ul>
             </fieldset>
 
-            <button class="button" type="submit">Применить</button>
-            <button class="button button--secondary" type="reset">Сбросить</button>
+            <div class="filters__buttons">
+              <button class="filters__button button" type="submit">Применить</button>
+              <button class="filters__button button button--secondary" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
 

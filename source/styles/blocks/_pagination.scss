@@ -31,7 +31,7 @@
 }
 
 .pagination__button:focus-visible {
-  outline-color: transparent;
+  outline: transparent;
 }
 
 .pagination__button:is(:hover, :focus-visible) {

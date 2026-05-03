@@ -1,7 +1,7 @@
 @use "../common/variables.scss";
 
 .catalog {
-  padding-block: 50px 44px;
+  padding-block: 50px 43px;
 
   background-color: #f8f8f8;
 }
@@ -12,6 +12,11 @@
   margin-block-end: 20px;
 }
 
+.catalog__filters {
+  margin-block-end: 42px;
+}
+
+.catalog__filters,
 .catalog__products {
   inline-size: var(--content-mobile-width, #{variables.$content-mobile-width});
   margin-inline: auto;
@@ -19,13 +24,18 @@
 
 @media (min-width: #{variables.$tablet-width}) {
   .catalog {
-    padding-block: 80px 90px;
+    padding-block: 80px 89px;
   }
 
   .catalog__title {
     inline-size: var(--content-tablet-width, #{variables.$content-tablet-width});
   }
 
+  .catalog__filters {
+    margin-block-end: 40px;
+  }
+
+  .catalog__filters,
   .catalog__products {
     inline-size: var(--content-tablet-width, #{variables.$content-tablet-width});
   }
@@ -33,15 +43,26 @@
 
 @media (min-width: #{variables.$desktop-width}) {
   .catalog {
+    display: grid;
+    grid-template-columns: 1fr [filters] 318px [cards] 1011px 1fr;
+    column-gap: 30px;
     padding-block: 100px 120px;
   }
 
   .catalog__title {
+    grid-column: 1 / -1;
     inline-size: var(--content-desktop-width, #{variables.$content-desktop-width});
-    margin-block-end: 40px;
+    margin-block-end: 36px;
+  }
+
+  .catalog__filters {
+    padding-block-start: 4px;
+    inline-size: auto;
+    grid-column: filters;
   }
 
   .catalog__products {
-    inline-size: var(--content-desktop-width, #{variables.$content-desktop-width});
+    inline-size: auto;
+    grid-column: cards;
   }
 }
