@@ -1,0 +1,46 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.range {
+  display: grid;
+  grid-template-columns: [dual-range-start from] 1fr [bar] 8px [to] 1fr [dual-range-end];
+  gap: 33px 18px;
+  padding-block-start: 10px;
+}
+
+.range::before {
+  content: "";
+
+  display: block;
+  block-size: 2px;
+  grid-column: bar;
+  grid-row: 2;
+  align-self: center;
+
+  background-color: #bdbdbd;
+}
+
+.range__input {
+  grid-column: dual-range;
+}
+
+.range__from {
+  grid-column: from;
+}
+
+.range__to {
+  grid-column: to;
+}
+
+
+@media (min-width: #{variables.$tablet-width}) {
+  .range {
+    gap: 29px 20px;
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .range {
+    gap: 32px 20px;
+  }
+}

@@ -1,0 +1,50 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.products__order-by {
+  margin-block-end: 16px;
+}
+
+.products__list {
+  @include mixins.reset-list;
+  margin-block: 0 40px;
+}
+
+.products__item {
+  margin-block-end: 20px;
+}
+
+.products__item:last-child {
+  margin-block-end: 0;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .products__order-by {
+    inline-size: fit-content;
+    margin-inline-start: auto;
+    margin-block-end: 26px;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-block-end: 70px;
+  }
+
+  .products__item {
+    margin-block-end: 0;
+  }
+
+  .products__pagination {
+    inline-size: fit-content;
+    margin-inline-start: auto;
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .products__list {
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-end: 60px;
+  }
+}

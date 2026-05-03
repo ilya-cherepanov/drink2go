@@ -1,0 +1,33 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.field-group {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+}
+
+.field-group__legend {
+  margin-bottom: 20px;
+  padding: 0;
+
+  @include mixins.primary-font(
+    $font-size: 16px,
+    $line-height: 24px,
+    $font-weight: 600,
+  );
+}
+
+.field-group__list {
+  @include mixins.reset-list;
+  margin: 0;
+}
+
+.field-group__item {
+  margin-block-end: 20px;
+}
+
+.field-group__item:last-child {
+  margin-block-end: 0;
+}

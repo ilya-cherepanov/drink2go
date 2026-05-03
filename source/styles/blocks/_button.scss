@@ -1,0 +1,70 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.button {
+  display: block;
+  padding-block: 8px;
+  padding-inline: 20px;
+
+  @include mixins.primary-font(
+    $font-size: 16px,
+    $line-height: 24px,
+  );
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: transparent;
+}
+
+.button:is(:hover, :focus-visible) {
+  color: #ffffff;
+  background-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+}
+
+.button:active {
+  color: #ffffff;
+  background-color: var(--clr-primary-darker, #{variables.$clr-primary-darker});
+}
+
+.button:disabled {
+  color: #ffffff;
+  background-color: #bdbdbd;
+  pointer-events: none;
+}
+
+.button--secondary {
+  color: var(--clr-primary, #{variables.$clr-primary});
+  background-color: #ffffff;
+}
+
+.button--secondary:disabled {
+  background-color: #e2e2e2;
+}
+
+.button--cart-add {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button--cart-add::before {
+  content: "";
+
+  display: inline-block;
+  min-inline-size: 20px;
+  min-block-size: 16px;
+  margin-inline-end: 1px;
+  margin-block-start: 1px;
+
+  vertical-align: top;
+
+  background-color: #ffffff;
+  mask-image: url("../../icons/stack.svg#cart-plus");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}

@@ -1,0 +1,90 @@
+@use "../common/variables.scss";
+
+.dual-range.noui-target {
+  block-size: 4px;
+
+  background-image: linear-gradient(to bottom, transparent 1px, #e2e2e2 1px, #e2e2e2 2px, transparent 2px);
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.dual-range .noui-connect {
+  background-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+}
+
+.dual-range[disabled] .noui-connect {
+  background-color: #bdbdbd;
+}
+
+.dual-range .noui-handle {
+  top: -10px;
+
+  box-sizing: border-box;
+  inline-size: 24px;
+  block-size: 24px;
+
+  border: 2px solid var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.dual-range .noui-handle-lower {
+  right: -24px;
+}
+
+.dual-range .noui-handle-upper {
+  right: 0;
+}
+
+.dual-range .noui-handle::before {
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+
+  display: none;
+  inline-size: 16px;
+  block-size: 16px;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dual-range .noui-handle::after {
+  display: none;
+}
+
+.dual-range .noui-handle:focus-visible {
+  outline: transparent;
+}
+
+.dual-range .noui-handle:is(:hover, :focus-visible)::before {
+  display: block;
+
+  background-color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+}
+
+.dual-range .noui-handle:active {
+  border-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.dual-range .noui-handle:active::before {
+  display: block;
+
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.dual-range[disabled] {
+  cursor: default;
+}
+
+.dual-range[disabled] .noui-handle {
+  background-color: #f8f8f8;
+  border-color: #bdbdbd;
+  cursor: default;
+}
+
+.dual-range[disabled] .noui-handle:is(:hover, :active)::before {
+  display: none;
+}

@@ -1,0 +1,9 @@
+@use "../common/mixins.scss";
+
+.price {
+  @include mixins.primary-font(
+    $font-size: 20px,
+    $line-height: 32px,
+    $font-weight: 600,
+  );
+}

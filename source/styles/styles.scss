@@ -1,3 +1,6 @@
+/* noUiSlider */
+@use "../vendor/nouislider/nouislider.min.css";
+
 /* GLOBAL */
 @use "./common/variables.scss";
 @use "./common/global.scss";
@@ -10,5 +13,19 @@
 @use "./blocks/title.scss";
 @use "./blocks/advantages.scss";
 @use "./blocks/advantage.scss";
+@use "./blocks/catalog.scss";
+@use "./blocks/products.scss";
+@use "./blocks/product.scss";
+@use "./blocks/pagination.scss";
+@use "./blocks/select-field.scss";
+@use "./blocks/field-group.scss";
+@use "./blocks/filters.scss";
+@use "./blocks/range.scss";
+@use "./blocks/radio-field.scss";
+@use "./blocks/checkbox-field.scss";
+@use "./blocks/text-field.scss";
+@use "./blocks/dual-range.scss";
+@use "./blocks/price.scss";
+@use "./blocks/button.scss";
 @use "./blocks/map.scss";
 @use "./blocks/visually-hidden.scss";

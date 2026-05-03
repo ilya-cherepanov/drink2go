@@ -1,0 +1,84 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.radio-field {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+
+.radio-field__input {
+  position: relative;
+
+  min-inline-size: 24px;
+  min-block-size: 24px;
+  padding: 2px;
+  margin: 0;
+
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  background-color: #ffffff;
+  appearance: none;
+}
+
+.radio-field__input::before {
+  content: "";
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+
+  inline-size: 16px;
+  block-size: 16px;
+
+  border-radius: 50%;
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.radio-field__input:checked {
+  border-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.radio-field__input:checked::before {
+  display: block;
+}
+
+.radio-field__input:focus-visible {
+  outline: transparent;
+}
+
+.radio-field__input:is(:hover, :focus-visible) {
+  border-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+}
+
+.radio-field__input:is(:hover, :focus-visible)::before {
+  display: block;
+
+  background-color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+}
+
+.radio-field__input:disabled {
+  border-color: #e2e2e2;
+  background-color: #f8f8f8;
+}
+
+.radio-field__input:disabled:is(:hover, :focus-visible):not(:checked)::before {
+  display: none;
+}
+
+.radio-field__input:disabled:checked {
+  background-color: #f8f8f8;
+}
+
+.radio-field__input:disabled:checked::before {
+  background-color: #e2e2e2;
+}
+
+.radio-field__label {
+  @include mixins.primary-font(
+    $font-size: 16px,
+    $line-height: 24px,
+  );
+}
+
+.radio-field__input:disabled ~ .radio-field__label {
+  color: #e2e2e2;
+}
