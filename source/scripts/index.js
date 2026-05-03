@@ -8,7 +8,7 @@ const dualRange = document.querySelector('.dual-range');
 noUiSlider.create(dualRange, {
   start: [0, 900],
   connect: true,
-  // cssPrefix: 'noui-',
+  cssPrefix: 'noui-',
   range: {
     min: Price.Min,
     max: Price.Max,
