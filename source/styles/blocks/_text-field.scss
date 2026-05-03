@@ -23,6 +23,7 @@
   border-radius: 4px;
   border: 2px solid var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
   background-color: #ffffff;
+  appearance: textfield;
 }
 
 .text-field__input::placeholder {
