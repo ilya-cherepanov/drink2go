@@ -1,8 +1,8 @@
 import { NavButtonLabel } from '../constants.js';
 
 export class MainNavigation {
-  constructor() {
-    this._headerElement = document.querySelector('.header');
+  constructor(rootElement) {
+    this._headerElement = rootElement;
     this._buttonElement = this._headerElement.querySelector('.header__action--menu');
     this._buttonCaptionElement = this._buttonElement.querySelector('.header__action-caption');
     this._navigationElement = this._headerElement.querySelector('.header__navigation');

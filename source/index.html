@@ -64,6 +64,115 @@
     <main>
       <h1 class="visually-hidden">Главная страница <span lang="en">Drink To Go</span></h1>
 
+      <section class="carousel">
+        <h2 class="visually-hidden">Специальные предложения</h2>
+        <button class="carousel__button carousel__button--prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <div class="carousel__frame">
+          <ul class="carousel__slides">
+            <li class="carousel__slide slide">
+              <h3 class="slide__heading">
+                <span class="slide__badge">Новинка!</span>
+                <span class="slide__title">Декаф Флэт Уайт</span>
+              </h3>
+              <picture class="slide__image-container">
+                <source media="(min-width: 1440px)" type="image/webp" srcset="images/slides/flat-white-desktop@1x.webp 1x, images/slides/flat-white-desktop@2x.webp 2x" width="600" height="600">
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/slides/flat-white-desktop@1x.png 1x, images/slides/flat-white-desktop@2x.png 2x" width="600" height="600">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/slides/flat-white-tablet@1x.webp 1x, images/slides/flat-white-tablet@2x.webp 2x" width="476" height="476">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/slides/flat-white-tablet@1x.png 1x, images/slides/flat-white-tablet@2x.png 2x" width="476" height="476">
+                <source media="(min-width: 320px)" type="image/webp" srcset="images/slides/flat-white-mobile@1x.webp 1x, images/slides/flat-white-mobile@2x.webp 2x" width="280" height="280">
+                <img class="slide__image" src="images/slides/flat-white-mobile@1x.png" srcset="images/slides/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Белая банка Декаф Флэт Уайт">
+              </picture>
+              <p class="slide__description">
+                Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="slide__bottom">
+                <p class="slide__price">
+                  <span class="visually-hidden">Старая цена</span>
+                  <del class="price price--old">295₽</del>
+                  <span class="visually-hidden">Новая цена</span>
+                  <ins class="price">225₽</ins>
+                </p>
+                <a class="slide__button button" href="#">Заказать</a>
+              </div>
+            </li>
+            <li class="carousel__slide slide">
+              <h3 class="slide__heading">
+                <span class="slide__badge">Новинка!</span>
+                <span class="slide__title">Лавандовый Латте</span>
+              </h3>
+              <picture class="slide__image-container">
+                <source media="(min-width: 1440px)" type="image/webp" srcset="images/slides/lavender-desktop@1x.webp 1x, images/slides/lavender-desktop@2x.webp 2x" width="600" height="600">
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/slides/lavender-desktop@1x.png 1x, images/slides/lavender-desktop@2x.png 2x" width="600" height="600">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/slides/lavender-tablet@1x.webp 1x, images/slides/lavender-tablet@2x.webp 2x" width="476" height="476">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/slides/lavender-tablet@1x.png 1x, images/slides/lavender-tablet@2x.png 2x" width="476" height="476">
+                <source media="(min-width: 320px)" type="image/webp" srcset="images/slides/lavender-mobile@1x.webp 1x, images/slides/lavender-mobile@2x.webp 2x" width="280" height="280">
+                <img class="slide__image" src="images/slides/lavender-mobile@1x.png" srcset="images/slides/lavender-mobile@2x.png 2x" width="280" height="280" alt="Фиолетовая банка Лавандового Латте">
+              </picture>
+              <p class="slide__description">
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+              <div class="slide__bottom">
+                <p class="slide__price">
+                  <span class="visually-hidden">Старая цена</span>
+                  <del class="price price--old">285₽</del>
+                  <span class="visually-hidden">Новая цена</span>
+                  <ins class="price">265₽</ins>
+                </p>
+                <a class="slide__button button" href="#" tabindex="-1">Заказать</a>
+              </div>
+            </li>
+            <li class="carousel__slide slide">
+              <h3 class="slide__heading">
+                <span class="slide__badge">Новинка!</span>
+                <span class="slide__title">Тройной Эспрессо</span>
+              </h3>
+              <picture class="slide__image-container">
+                <source media="(min-width: 1440px)" type="image/webp" srcset="images/slides/espresso-desktop@1x.webp 1x, images/slides/espresso-desktop@2x.webp 2x" width="600" height="600">
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/slides/espresso-desktop@1x.png 1x, images/slides/espresso-desktop@2x.png 2x" width="600" height="600">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/slides/espresso-tablet@1x.webp 1x, images/slides/espresso-tablet@2x.webp 2x" width="476" height="476">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/slides/espresso-tablet@1x.png 1x, images/slides/espresso-tablet@2x.png 2x" width="476" height="476">
+                <source media="(min-width: 320px)" type="image/webp" srcset="images/slides/espresso-mobile@1x.webp 1x, images/slides/espresso-mobile@2x.webp 2x" width="280" height="280">
+                <img class="slide__image" src="images/slides/espresso-mobile@1x.png" srcset="images/slides/espresso-mobile@2x.png 2x" width="280" height="280" alt="Черная банка Тройного Эспрессо">
+              </picture>
+              <p class="slide__description">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="slide__bottom">
+                <p class="slide__price">
+                  <span class="visually-hidden">Старая цена</span>
+                  <del class="price price--old">395₽</del>
+                  <span class="visually-hidden">Новая цена</span>
+                  <ins class="price">375₽</ins>
+                </p>
+                <a class="slide__button button" href="#" tabindex="-1">Заказать</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+        <ol class="carousel__switches">
+          <li class="carousel__switch-item">
+            <button class="carousel__switch-button carousel__switch-button--active" type="button">
+              <span class="visually-hidden">Слайд номер 1</span>
+            </button>
+          </li>
+          <li class="carousel__switch-item">
+            <button class="carousel__switch-button" type="button">
+              <span class="visually-hidden">Слайд номер 2</span>
+            </button>
+          </li>
+          <li class="carousel__switch-item">
+            <button class="carousel__switch-button" type="button">
+              <span class="visually-hidden">Слайд номер 3</span>
+            </button>
+          </li>
+        </ol>
+      </section>
+
       <section class="advantages">
         <hgroup class="advantages__title title">
           <h2 class="title__main">Преимущества</h2>

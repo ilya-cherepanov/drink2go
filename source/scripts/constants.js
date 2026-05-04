@@ -8,3 +8,9 @@ export const Price = Object.freeze({
   Max: 967,
 });
 export const DEFAULT_MAX_PRICE = 900;
+
+export const CAROUSEL_BACKGROUNDS = Object.freeze([
+  '#f3ebe1',
+  '#eae6fc',
+  '#e5e6e8',
+]);

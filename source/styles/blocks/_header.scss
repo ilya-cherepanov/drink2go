@@ -27,6 +27,7 @@
 
 .header--navigation-open .header__navigation {
   display: block;
+  z-index: 1;
 }
 
 .header__actions {
@@ -145,13 +146,12 @@
     vertical-align: middle;
   }
 
-  .header__action:hover {
+  .header__action:is(:hover, :focus-visible) {
     color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .header__action:focus-visible {
-    outline-color: transparent;
-    color: var(--clr-primary, #{variables.$clr-primary});
+    outline: transparent;
   }
 
   .header__action:is(:hover, :focus-visible)::before {
