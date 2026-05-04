@@ -96,7 +96,7 @@
   .slide {
     display: grid;
     grid-template-columns: [image] 600px [content] 1fr;
-    grid-template-rows: [image-start] 150px [heading] auto [description] auto [bottom] 1fr [image-end];
+    grid-template-rows: [image-start] 150px [heading] auto [description] auto [bottom] 1fr 40px [image-end];
     column-gap: 30px;
     padding-inline-start: 25px;
   }

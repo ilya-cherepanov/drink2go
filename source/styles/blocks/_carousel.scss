@@ -2,6 +2,7 @@
 @use "../common/variables.scss";
 
 .carousel {
+  --current-slide: 0;
   --background-color: #f3ebe1;
 
   display: grid;
@@ -12,6 +13,7 @@
   grid-template-rows: [button-start] 20px [slide] auto 60px [button-end];
 
   background-color: var(--background-color);
+  transition: background-color 0.5s;
 }
 
 .carousel__frame {
@@ -26,6 +28,9 @@
   @include mixins.reset-list;
   margin: 0;
   display: flex;
+
+  transform: translateX(calc(var(--current-slide, 0) * -1 * 100%));
+  transition: transform 0.2s;
 }
 
 .carousel__slide {

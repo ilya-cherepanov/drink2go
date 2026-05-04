@@ -38,7 +38,6 @@ export class Range {
     this._dualRangeElement.noUiSlider.set([Number(value), null]);
   }
 
-
   get to() {
     return this._to;
   }
