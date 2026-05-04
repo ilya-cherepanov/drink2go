@@ -38,4 +38,17 @@
       $line-height: 16px,
     );
   }
+
+  .logo--alt {
+    display: block;
+  }
+
+  .logo--alt .logo__link {
+    display: block;
+    margin-block-end: 10px;
+  }
+
+  .logo--alt .logo__caption {
+    max-inline-size: none;
+  }
 }

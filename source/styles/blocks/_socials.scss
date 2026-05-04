@@ -1,0 +1,62 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.socials__list {
+  @include mixins.reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+}
+
+.socials__link {
+  position: relative;
+
+  display: block;
+  min-inline-size: 40px;
+  min-block-size: 40px;
+
+  border-radius: 4px;
+}
+
+.socials__link:is(:hover, :focus-visible) {
+  background-color: var(--clr-secondary, #{variables.$clr-secondary});
+}
+
+.socials__link:focus-visible {
+  outline: transparent;
+}
+
+.socials__link:active {
+  background-color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+}
+
+.socials__link::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  background-color: #bdbdbd;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 20px 20px;
+}
+
+.socials__link:is(:hover, :focus-visible, :active)::before {
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.socials__link--vk::before {
+  mask-image: url("../../icons/stack.svg#social-vk");
+}
+
+.socials__link--pinterest::before {
+  mask-image: url("../../icons/stack.svg#social-pinterest");
+  mask-size: 22px 22px;
+}
+
+.socials__link--ok::before {
+  mask-image: url("../../icons/stack.svg#social-ok");
+}
