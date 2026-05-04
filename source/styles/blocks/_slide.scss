@@ -1,0 +1,131 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.slide {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.primary-font;
+}
+
+.slide__heading {
+  display: block;
+  margin-block: 0 10px;
+
+  font-weight: 700;
+  text-align: center;
+}
+
+.slide__badge {
+  display: block;
+  margin-block-end: 4px;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.slide__title {
+  display: block;
+
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+
+.slide__image-container {
+  display: block;
+  margin-block-end: 10px;
+  order: -1;
+}
+
+.slide__image {
+  display: block;
+  inline-size: 100%;
+  object-fit: contain;
+}
+
+.slide__description {
+  margin-block: 0 20px;
+
+  text-align: center;
+}
+
+.slide__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide__price {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+@media (min-width: #{variables.$tablet-width}) {
+  .slide__heading {
+    margin-block-end: 16px;
+  }
+
+  .slide__title {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .slide__image-container {
+    order: 1;
+    margin: 0;
+  }
+
+  .slide__description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .slide__bottom {
+    margin-block-end: 20px;
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .slide {
+    display: grid;
+    grid-template-columns: [image] 600px [content] 1fr;
+    grid-template-rows: [image-start] 150px [heading] auto [description] auto [bottom] 1fr [image-end];
+    column-gap: 30px;
+    padding-inline-start: 25px;
+  }
+
+  .slide__heading {
+    grid-column: content;
+    grid-row: heading;
+
+    text-align: start;
+  }
+
+  .slide__image-container {
+    grid-column: image;
+    grid-row: image;
+  }
+
+  .slide__description {
+    grid-column: content;
+    grid-row: description;
+    margin-block-end: 40px;
+
+    text-align: start;
+  }
+
+  .slide__bottom {
+    grid-column: content;
+    grid-row: bottom;
+    align-self: start;
+    justify-content: start;
+    margin-block-end: 0;
+  }
+}

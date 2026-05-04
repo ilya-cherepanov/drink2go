@@ -1,0 +1,189 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.carousel {
+  --background-color: #f3ebe1;
+
+  display: grid;
+  grid-template-columns:
+    1fr
+    [button-prev] 20px [slide] var(--content-mobile-width, #{variables.$content-mobile-width}) [button-next] 20px
+    1fr;
+  grid-template-rows: [button-start] 20px [slide] auto 60px [button-end];
+
+  background-color: var(--background-color);
+}
+
+.carousel__frame {
+  position: relative;
+
+  grid-column: slide;
+  grid-row: slide;
+  overflow: hidden;
+}
+
+.carousel__slides {
+  @include mixins.reset-list;
+  margin: 0;
+  display: flex;
+}
+
+.carousel__slide {
+  box-sizing: border-box;
+  min-inline-size: 100%;
+}
+
+.carousel__button {
+  position: relative;
+
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button::before {
+  content: "";
+
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+
+  display: block;
+  inline-size: 20px;
+  block-size: 20px;
+
+  background-color: var(--primary-color, #{variables.$clr-primary});
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transform: translate(-50%, -50%);
+}
+
+.carousel__button--prev {
+  grid-row: button;
+  grid-column: button-prev;
+}
+
+.carousel__button--prev::before {
+  mask-image: url("../../icons/stack.svg#arrow-left-l");
+}
+
+.carousel__button--next {
+  grid-row: button;
+  grid-column: button-next;
+}
+
+.carousel__button--next::before {
+  mask-image: url("../../icons/stack.svg#arrow-left-l");
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.carousel__button:is(:hover, :focus-visible) {
+  background-color: #ffffff;
+}
+
+.carousel__button:focus-visible {
+  outline: transparent;
+}
+
+.carousel__button:active {
+  --gradient-direction: to right;
+  background-color: transparent;
+  background-image: linear-gradient(var(--gradient-direction), var(--clr-primary-transparent, #{variables.$clr-primary-transparent}), transparent);
+}
+
+.carousel__button--prev:active {
+  --gradient-direction: to right;
+}
+
+.carousel__button--next:active {
+  --gradient-direction: to left;
+}
+
+.carousel__button:disabled,
+.carousel__button:disabled:is(:hover, :focus-visible, :active) {
+  background: none;
+  background-image: none;
+  cursor: default;
+}
+
+.carousel__button:disabled::before {
+  background-color: #bdbdbd;
+}
+
+.carousel__switches {
+  @include mixins.reset-list;
+  display: none;
+}
+
+@media (min-width: #{variables.$tablet-width}) {
+  .carousel {
+    grid-template-columns:
+      1fr
+      [button-prev] 80px
+      [slide] calc(var(--tablet-width, #{variables.$tablet-width}) - 2 * 80px)
+      [button-next] 80px
+      1fr;
+    grid-template-rows: [button-start] 60px [slide-start] auto [button-end] 188px [slide-end];
+
+    background-color: transparent;
+    background-image: linear-gradient(to top, transparent 188px, var(--background-color) 188px);
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .carousel {
+    grid-template-columns:
+      1fr
+      [button-prev] 80px
+      [slide switches] calc(var(--desktop-width, #{variables.$desktop-width}) - 2 * 80px)
+      [button-next] 80px
+      1fr;
+    grid-template-rows:
+      [button-start] 30px
+      [slide] auto
+      [switches] auto
+      60px [button-end];
+
+    background: none;
+    background-color: var(--background-color);
+  }
+
+  .carousel__switches {
+    display: flex;
+    gap: 8px;
+    grid-column: switches;
+    grid-row: switches;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .carousel__switch-button {
+    --bar-color: #ffffff;
+
+    box-sizing: border-box;
+    block-size: 24px;
+    inline-size: 62px;
+
+    border: 0;
+    background: none;
+    background-image: linear-gradient(to bottom, transparent 10px, var(--bar-color) 10px, var(--bar-color) 14px, transparent 14px);
+    cursor: pointer;
+  }
+
+  .carousel__switch-button:is(:hover, :focus-visible) {
+    --bar-color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+  }
+
+  .carousel__switch-button:focus-visible {
+    outline: transparent;
+  }
+
+  .carousel__switch-button--active {
+    --bar-color: var(--clr-primary, #{variables.$clr-primary});
+  }
+
+  .carousel__switch-button:disabled {
+    --bar-color: #bdbdbd;
+    cursor: default;
+  }
+}

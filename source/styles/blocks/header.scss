@@ -27,6 +27,7 @@
 
 .header--navigation-open .header__navigation {
   display: block;
+  z-index: 1;
 }
 
 .header__actions {
