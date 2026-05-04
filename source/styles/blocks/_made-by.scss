@@ -1,0 +1,55 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.made-by {
+  margin: 0;
+
+  @include mixins.primary-font(
+    $font-size: 12px,
+    $line-height: 16px,
+    $color: #bdbdbd,
+  );
+  text-align: center;
+}
+
+.made-by__link {
+  display: inline-block;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.made-by__link:is(:hover, :focus-visible) {
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.made-by__link:focus-visible {
+  outline: transparent;
+}
+
+.made-by__link:active {
+  color: var(--clr-primary-darker, #{variables.$clr-primary-darker});
+}
+
+.made-by__link::after {
+  content: "";
+
+  display: inline-block;
+  block-size: 16px;
+  inline-size: 12px;
+
+  vertical-align: top;
+
+  background-color: #bdbdbd;
+  mask-image: url("../../icons/stack.svg#htmlacademy");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.made-by__link:is(:hover, :focus-visible)::after {
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.made-by__link:active::after {
+  background-color: var(--clr-primary-darker, #{variables.$clr-primary-darker});
+}
