@@ -26,22 +26,20 @@ export class Carousel {
   }
 
   set currentSlide(slide) {
-    slide = Number(slide);
-    slide = Number.isNaN(slide) ? 0 : slide;
-    slide = Math.max(0, Math.min(slide, this._lastSlideIdx));
+    const normalizedSlide = this._normalizeSlideIdx(slide);
 
-    if (this._currentSlideIdx !== 0 && slide === 0) {
+    if (this._currentSlideIdx !== 0 && normalizedSlide === 0) {
       this._buttonPrev.removeEventListener('click', this._prevClickHandler);
       this._buttonPrev.disabled = true;
-    } else if (this._currentSlideIdx !== this._lastSlideIdx && slide === this._lastSlideIdx) {
+    } else if (this._currentSlideIdx !== this._lastSlideIdx && normalizedSlide === this._lastSlideIdx) {
       this._buttonNext.removeEventListener('click', this._nextClickHandler);
       this._buttonNext.disabled = true;
     }
 
-    if (this._currentSlideIdx === 0 && slide !== 0) {
+    if (this._currentSlideIdx === 0 && normalizedSlide !== 0) {
       this._buttonPrev.addEventListener('click', this._prevClickHandler);
       this._buttonPrev.disabled = false;
-    } else if (this._currentSlideIdx === this._lastSlideIdx && slide !== this._lastSlideIdx) {
+    } else if (this._currentSlideIdx === this._lastSlideIdx && normalizedSlide !== this._lastSlideIdx) {
       this._buttonNext.addEventListener('click', this._nextClickHandler);
       this._buttonNext.disabled = false;
     }
@@ -49,7 +47,7 @@ export class Carousel {
     this._switchButtons[this._currentSlideIdx].classList.remove('carousel__switch-button--active');
     this._slideButtons[this._currentSlideIdx].tabIndex = -1;
 
-    this._currentSlideIdx = slide;
+    this._currentSlideIdx = normalizedSlide;
     this._carouselElement.style.setProperty('--current-slide', this._currentSlideIdx);
     this._carouselElement.style.setProperty(
       '--background-color',
@@ -57,6 +55,12 @@ export class Carousel {
     );
     this._switchButtons[this._currentSlideIdx].classList.add('carousel__switch-button--active');
     this._slideButtons[this._currentSlideIdx].tabIndex = 0;
+  }
+
+  _normalizeSlideIdx(slide) {
+    let resultIdx = Number(slide);
+    resultIdx = Number.isNaN(resultIdx) ? 0 : slide;
+    return Math.max(0, Math.min(resultIdx, this._lastSlideIdx));
   }
 
   _prevClickHandler = (evt) => {
