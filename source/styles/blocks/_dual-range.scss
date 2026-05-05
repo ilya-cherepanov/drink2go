@@ -9,6 +9,11 @@
   box-shadow: none;
 }
 
+.dual-range .noui-base {
+  width: calc(100% - 24px);
+  left: 12px;
+}
+
 .dual-range .noui-connect {
   background-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
 }
@@ -32,11 +37,11 @@
 }
 
 .dual-range .noui-handle-lower {
-  right: -24px;
+  right: -12px;
 }
 
 .dual-range .noui-handle-upper {
-  right: 0;
+  right: -12;
 }
 
 .dual-range .noui-handle::before {
