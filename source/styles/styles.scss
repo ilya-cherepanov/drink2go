@@ -7,6 +7,7 @@
 @use "./common/fonts.scss";
 
 /* BLOCKS */
+@use "./blocks/page.scss";
 @use "./blocks/header.scss";
 @use "./blocks/logo.scss";
 @use "./blocks/page-navigation.scss";
