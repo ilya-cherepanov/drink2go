@@ -24,6 +24,7 @@
   border: 2px solid var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
   background-color: #ffffff;
   appearance: textfield;
+  transition: all 100ms;
 }
 
 .text-field__input::placeholder {

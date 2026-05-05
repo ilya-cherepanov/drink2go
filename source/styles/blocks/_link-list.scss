@@ -40,6 +40,7 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 100ms;
 }
 
 .link-list__link:is(:hover, :focus-visible) {

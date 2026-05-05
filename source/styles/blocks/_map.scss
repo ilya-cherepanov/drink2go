@@ -1,17 +1,25 @@
 @use "../common/variables.scss";
 
 .map {
-  position: relative;
+  display: grid;
+  grid-template-columns: [map-start] 1fr [pin] 38px 1fr [map-end];
+  grid-template-rows: [map-start] 1fr [pin] 50px 1fr [map-end];
 
   min-block-size: 420px;
 }
 
 .map__image-container {
-  position: absolute;
-  inset: 0;
+  position: relative;
+
+  display: block;
+  grid-column: map;
+  grid-row: map;
 }
 
 .map__image {
+  position: absolute;
+  inset: 0;
+
   display: block;
   inline-size: 100%;
 
@@ -19,23 +27,21 @@
 }
 
 .map__pin {
-  position: absolute;
-  inset-inline-start: 50%;
-  inset-block-start: 50%;
-
   display: block;
+  grid-column: pin;
+  grid-row: pin;
 
-  transform: translate(-10%, -50%);
+  transform: translateX(40%);
 }
 
 @media (min-width: #{variables.$tablet-width}) {
-  .map {
+  .map__image-container {
     min-block-size: 480px;
   }
 }
 
 @media (min-width: #{variables.$desktop-width}) {
-  .map {
+  .map__image-container {
     min-block-size: 540px;
   }
 }

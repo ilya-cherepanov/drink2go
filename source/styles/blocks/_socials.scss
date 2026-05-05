@@ -17,6 +17,7 @@
   min-block-size: 40px;
 
   border-radius: 4px;
+  transition: all 100ms;
 }
 
 .socials__link:is(:hover, :focus-visible) {
@@ -42,6 +43,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 20px 20px;
+  transition: all 100ms;
 }
 
 .socials__link:is(:hover, :focus-visible, :active)::before {

@@ -32,7 +32,6 @@
   grid-column: to;
 }
 
-
 @media (min-width: #{variables.$tablet-width}) {
   .range {
     gap: 29px 20px;
@@ -41,6 +40,7 @@
 
 @media (min-width: #{variables.$desktop-width}) {
   .range {
+    grid-template-columns: [dual-range-start from] 1fr [bar] 10px [to] 1fr [dual-range-end];
     gap: 32px 20px;
   }
 }

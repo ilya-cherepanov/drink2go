@@ -13,7 +13,6 @@
   grid-template-rows: [button-start] 20px [slide] auto 60px [button-end];
 
   background-color: var(--background-color);
-  transition: background-color 0.5s;
 }
 
 .carousel__frame {
@@ -44,6 +43,7 @@
   background: none;
   border: 0;
   cursor: pointer;
+  transition: all 100ms;
 }
 
 .carousel__button::before {
@@ -61,6 +61,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   transform: translate(-50%, -50%);
+  transition: all 100ms;
 }
 
 .carousel__button--prev {
@@ -147,7 +148,7 @@
       [button-start] 30px
       [slide] auto
       [switches] auto
-      60px [button-end];
+      57px [button-end];
 
     background: none;
     background-color: var(--background-color);
@@ -183,6 +184,7 @@
     outline: transparent;
   }
 
+  .carousel__switch-button:active,
   .carousel__switch-button--active {
     --bar-color: var(--clr-primary, #{variables.$clr-primary});
   }

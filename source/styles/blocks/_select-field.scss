@@ -36,6 +36,7 @@
   background-position: top 14px right 10px;
   background-size: 10px 6px;
   cursor: pointer;
+  transition: all 100ms;
 }
 
 .select-field__input:is(:hover, :focus-visible) {

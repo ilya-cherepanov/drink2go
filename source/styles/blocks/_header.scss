@@ -52,6 +52,7 @@
   text-transform: uppercase;
   color: var(--clr-base-font, #{variables.$clr-base-font});
   cursor: pointer;
+  transition: all 100ms;
 }
 
 .header__action::before {
@@ -67,6 +68,29 @@
   background-color: var(--clr-black, #{variables.$clr-black});
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 100ms;
+}
+
+.header__action:is(:hover, :focus-visible) {
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.header__action:focus-visible {
+  outline: transparent;
+}
+
+.header__action:is(:hover, :focus-visible)::before {
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.header__action:active {
+  color: var(--clr-black, #{variables.$clr-black});
+
+  background-color: var(--clr-secondary, #{variables.$clr-secondary});
+}
+
+.header__action:active::before {
+  background-color: var(--clr-black, #{variables.$clr-black});
 }
 
 .header__action--login::before {
@@ -85,10 +109,6 @@
   mask-image: url("../../icons/stack.svg#cross");
 }
 
-.header__action:active {
-  background-color: var(--clr-secondary, #{variables.$clr-secondary});
-}
-
 .header__action-caption {
   @include mixins.visually-hidden;
 }
@@ -96,6 +116,10 @@
 @media (min-width: #{variables.$tablet-width}) {
   .header {
     display: block;
+  }
+
+  .header__logo {
+    margin-inline-end: 20px;
   }
 
   .header__container {
@@ -110,12 +134,26 @@
     margin-inline-start: 5px;
   }
 
+  .header__actions {
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-inline-start: 20px;
+  }
+
   .header__action {
     padding-block: 32px;
   }
 
+  .header__action:active {
+    color: var(--clr-primary, #{variables.$clr-primary});
+  }
+
   .header__action::before {
     inset-block: 32px;
+  }
+
+  .header__action:active::before {
+    background-color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .header__action--menu {
@@ -129,8 +167,16 @@
     padding-inline: 40px;
   }
 
+  .header__logo {
+    min-inline-size: 317px;
+  }
+
+  .header__navigation {
+    margin-inline-start: 0;
+  }
+
   .header__actions {
-    gap: 20px;
+    column-gap: 20px;
   }
 
   .header__action {
@@ -142,20 +188,8 @@
     position: static;
 
     display: inline-block;
-    margin-inline-end: 5px;
+    margin-inline-end: 4px;
     vertical-align: middle;
-  }
-
-  .header__action:is(:hover, :focus-visible) {
-    color: var(--clr-primary, #{variables.$clr-primary});
-  }
-
-  .header__action:focus-visible {
-    outline: transparent;
-  }
-
-  .header__action:is(:hover, :focus-visible)::before {
-    background-color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .header__action-caption {

@@ -7,8 +7,9 @@
 @use "./common/fonts.scss";
 
 /* BLOCKS */
-@use "./blocks/header.scss";
+@use "./blocks/page.scss";
 @use "./blocks/logo.scss";
+@use "./blocks/header.scss";
 @use "./blocks/page-navigation.scss";
 @use "./blocks/slide.scss";
 @use "./blocks/carousel.scss";
