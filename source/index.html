@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/montserrat/montserrat-cyrillic_latin-400.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/montserrat-cyrillic_latin-700.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/montserrat-cyrillic_latin-600.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/montserrat-cyrillic_latin-500.woff2" type="font/woff2" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/180.png">
@@ -86,7 +89,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="images/slides/flat-white-tablet@1x.webp 1x, images/slides/flat-white-tablet@2x.webp 2x" width="476" height="476">
                 <source media="(min-width: 768px)" type="image/png" srcset="images/slides/flat-white-tablet@1x.png 1x, images/slides/flat-white-tablet@2x.png 2x" width="476" height="476">
                 <source media="(min-width: 320px)" type="image/webp" srcset="images/slides/flat-white-mobile@1x.webp 1x, images/slides/flat-white-mobile@2x.webp 2x" width="280" height="280">
-                <img class="slide__image" src="images/slides/flat-white-mobile@1x.png" srcset="images/slides/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Белая банка Декаф Флэт Уайт">
+                <img class="slide__image" src="images/slides/flat-white-mobile@1x.png" srcset="images/slides/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Белая банка Декаф Флэт Уайт" fetchpriority="high">
               </picture>
               <p class="slide__description">
                 Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
@@ -304,7 +307,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-white@1x.webp 1x, images/products/coffee-can-white@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-white@1x.png" srcset="images/products/coffee-can-white@2x.png 2x" width="130" height="188" alt="Белая банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-white@1x.png" srcset="images/products/coffee-can-white@2x.png 2x" width="130" height="188" alt="Белая банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -323,7 +326,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-violet@1x.webp 1x, images/products/coffee-can-violet@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-violet@1x.png" srcset="images/products/coffee-can-violet@2x.png 2x" width="130" height="188" alt="Фиолетовая банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-violet@1x.png" srcset="images/products/coffee-can-violet@2x.png 2x" width="130" height="188" alt="Фиолетовая банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -342,7 +345,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-black@1x.webp 1x, images/products/coffee-can-black@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-black@1x.png" srcset="images/products/coffee-can-black@2x.png 2x" width="130" height="188" alt="Черная банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-black@1x.png" srcset="images/products/coffee-can-black@2x.png 2x" width="130" height="188" alt="Черная банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -361,7 +364,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-pink@1x.webp 1x, images/products/coffee-can-pink@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-pink@1x.png" srcset="images/products/coffee-can-pink@2x.png 2x" width="130" height="188" alt="Розовая банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-pink@1x.png" srcset="images/products/coffee-can-pink@2x.png 2x" width="130" height="188" alt="Розовая банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -380,7 +383,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-brown@1x.webp 1x, images/products/coffee-can-brown@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-brown@1x.png" srcset="images/products/coffee-can-brown@2x.png 2x" width="130" height="188" alt="Коричневая банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-brown@1x.png" srcset="images/products/coffee-can-brown@2x.png 2x" width="130" height="188" alt="Коричневая банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -399,7 +402,7 @@
               <a class="product__image-link" href="#" tabindex="-1">
                 <picture class="product__image-container">
                   <source type="image/webp" srcset="images/products/coffee-can-yellow@1x.webp 1x, images/products/coffee-can-yellow@2x.webp 2x" width="130" height="188">
-                  <img class="product__image" src="images/products/coffee-can-yellow@1x.png" srcset="images/products/coffee-can-yellow@2x.png 2x" width="130" height="188" alt="Желтая банка Декаф Флэт Уайт">
+                  <img class="product__image" src="images/products/coffee-can-yellow@1x.png" srcset="images/products/coffee-can-yellow@2x.png 2x" width="130" height="188" alt="Желтая банка Декаф Флэт Уайт" loading="lazy">
                 </picture>
               </a>
               <p class="product__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -457,7 +460,7 @@
           <source media="(min-width: 320px)" type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" width="320" height="420">
           <img class="map__image" src="images/map/map-mobile@1x.jpg" srcset="images/map/map-mobile@2x.jpg 2x" width="320" height="420" alt="Картографическое изображение здания на перекрестке набережной Реки Карповки и Аптекарским проспектом">
         </picture>
-        <img class="map__pin" src="images/map/map-pin.svg" width="38" height="50" alt="Маркер указывающий на Санкт-Петербург, набережную реки Карповки, дом 5">
+        <img class="map__pin" src="images/map/map-pin.svg" width="38" height="50" alt="Маркер указывающий на Санкт-Петербург, набережную реки Карповки, дом 5" loading="lazy">
       </section>
     </main>
 

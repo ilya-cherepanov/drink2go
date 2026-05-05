@@ -3,8 +3,8 @@
 @font-face {
   font-family: #{variables.$primary-font};
   src:
-    url("../../fonts/montserrat/montserrat-cyrillic_latin-regular.woff2") format("woff2"),
-    url("../../fonts/montserrat/montserrat-cyrillic_latin-regular.woff") format("woff");
+    url("../../fonts/montserrat/montserrat-cyrillic_latin-400.woff2") format("woff2"),
+    url("../../fonts/montserrat/montserrat-cyrillic_latin-400.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -36,16 +36,6 @@
     url("../../fonts/montserrat/montserrat-cyrillic_latin-700.woff2") format("woff2"),
     url("../../fonts/montserrat/montserrat-cyrillic_latin-700.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: #{variables.$primary-font};
-  src:
-    url("../../fonts/montserrat/montserrat-cyrillic_latin-800.woff2") format("woff2"),
-    url("../../fonts/montserrat/montserrat-cyrillic_latin-800.woff") format("woff");
-  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
