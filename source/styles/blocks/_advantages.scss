@@ -3,7 +3,7 @@
 
 .advantages {
   --content-width: calc(var(--mobile-width, #{variables.$mobile-width}) - var(--mobile-padding, #{variables.$mobile-padding}) * 2);
-  padding-block: 50px 60px;
+  padding-block: 50px 45px;
 }
 
 .advantages__title {
@@ -30,7 +30,7 @@
 @media (min-width: #{variables.$tablet-width}) {
   .advantages {
     --content-width: calc(var(--tablet-width, #{variables.$tablet-width}) - var(--tablet-padding, #{variables.$tablet-padding}) * 2);
-    padding-block: 60px 100px;
+    padding-block: 60px 84px;
   }
 
   .advantages__list {
@@ -52,7 +52,7 @@
 @media (min-width: #{variables.$desktop-width}) {
   .advantages {
     --content-width: calc(var(--desktop-width, #{variables.$desktop-width}) - var(--desktop-padding, #{variables.$desktop-padding}) * 2);
-    padding-block: 100px 120px;
+    padding-block: 100px 104px;
   }
 
   .advantages__list {

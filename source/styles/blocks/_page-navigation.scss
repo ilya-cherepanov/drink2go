@@ -61,11 +61,12 @@
 
   .page-navigation__link--active {
     color: var(--clr-primary, #{variables.$clr-primary});
+    padding-block-end: 30px;
     border-block-end: 2px solid var(--clr-primary, #{variables.$clr-primary});
   }
 }
 
-@media (min-width: #{variables.$tablet-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   .page-navigation__list {
     gap: 20px;
   }

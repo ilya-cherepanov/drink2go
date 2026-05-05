@@ -129,6 +129,10 @@
     padding-inline: 40px;
   }
 
+  .header__navigation {
+    margin-inline-start: 0;
+  }
+
   .header__actions {
     gap: 20px;
   }
@@ -142,7 +146,7 @@
     position: static;
 
     display: inline-block;
-    margin-inline-end: 5px;
+    margin-inline-end: 4px;
     vertical-align: middle;
   }
 

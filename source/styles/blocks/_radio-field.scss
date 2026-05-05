@@ -19,6 +19,7 @@
   border-radius: 50%;
   background-color: #ffffff;
   appearance: none;
+  cursor: pointer;
 }
 
 .radio-field__input::before {
@@ -58,6 +59,7 @@
 .radio-field__input:disabled {
   border-color: #e2e2e2;
   background-color: #f8f8f8;
+  cursor: default;
 }
 
 .radio-field__input:disabled:is(:hover, :focus-visible):not(:checked)::before {
