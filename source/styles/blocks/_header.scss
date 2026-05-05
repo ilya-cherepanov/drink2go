@@ -69,6 +69,28 @@
   mask-repeat: no-repeat;
 }
 
+.header__action:is(:hover, :focus-visible) {
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.header__action:focus-visible {
+  outline: transparent;
+}
+
+.header__action:is(:hover, :focus-visible)::before {
+  background-color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.header__action:active {
+  color: var(--clr-black, #{variables.$clr-black});
+
+  background-color: var(--clr-secondary, #{variables.$clr-secondary});
+}
+
+.header__action:active::before {
+  background-color: var(--clr-black, #{variables.$clr-black});
+}
+
 .header__action--login::before {
   mask-image: url("../../icons/stack.svg#user");
 }
@@ -83,10 +105,6 @@
 
 .header--navigation-open .header__action--menu::before {
   mask-image: url("../../icons/stack.svg#cross");
-}
-
-.header__action:active {
-  background-color: var(--clr-secondary, #{variables.$clr-secondary});
 }
 
 .header__action-caption {
@@ -114,8 +132,16 @@
     padding-block: 32px;
   }
 
+  .header__action:active {
+    color: var(--clr-primary, #{variables.$clr-primary});
+  }
+
   .header__action::before {
     inset-block: 32px;
+  }
+
+  .header__action:active::before {
+    background-color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .header__action--menu {
@@ -148,18 +174,6 @@
     display: inline-block;
     margin-inline-end: 4px;
     vertical-align: middle;
-  }
-
-  .header__action:is(:hover, :focus-visible) {
-    color: var(--clr-primary, #{variables.$clr-primary});
-  }
-
-  .header__action:focus-visible {
-    outline: transparent;
-  }
-
-  .header__action:is(:hover, :focus-visible)::before {
-    background-color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .header__action-caption {

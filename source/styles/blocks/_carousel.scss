@@ -183,6 +183,7 @@
     outline: transparent;
   }
 
+  .carousel__switch-button:active,
   .carousel__switch-button--active {
     --bar-color: var(--clr-primary, #{variables.$clr-primary});
   }

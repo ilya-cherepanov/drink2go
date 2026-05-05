@@ -20,10 +20,11 @@
 
 .page-navigation__item {
   text-align: center;
+  border-block-end: 1px solid var(--crl-secondary, #{variables.$clr-secondary});
 }
 
-.page-navigation__item:not(:last-child) {
-  border-block-end: 1px solid var(--crl-secondary, #{variables.$clr-secondary});
+.page-navigation__item:last-child {
+  border-block-end: 0;
 }
 
 .page-navigation__link {
@@ -35,6 +36,27 @@
   text-decoration: none;
 }
 
+.page-navigation__link:is(:hover, :focus-visible) {
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.page-navigation__link:focus-visible {
+  outline: transparent;
+}
+
+.page-navigation__link--active {
+  color: var(--clr-primary, #{variables.$clr-primary});
+}
+
+.page-navigation__link--active:is(:hover, :focus-visible) {
+  color: var(--clr-primary-transparent, #{variables.$clr-primary-transparent});
+}
+
+.page-navigation__link:active {
+  color: var(--clr-black, #{variables.$clr-black});
+  background-color: var(--clr-secondary, #{variables.$clr-secondary});
+}
+
 @media (min-width: #{variables.$tablet-width}) {
   .page-navigation__list {
     display: flex;
@@ -43,7 +65,7 @@
     background-color: transparent;
   }
 
-  .page-navigation__item:not(:last-child) {
+  .page-navigation__item {
     border: 0;
   }
 
@@ -51,16 +73,11 @@
     padding-block: 32px;
   }
 
-  .page-navigation__link:is(:hover, :focus-visible) {
-    color: var(--clr-primary, #{variables.$clr-primary});
-  }
-
   .page-navigation__link:active {
-    background-color: var(--clr-secondary, #{variables.$clr-secondary});
+    color: var(--clr-primary, #{variables.$clr-primary});
   }
 
   .page-navigation__link--active {
-    color: var(--clr-primary, #{variables.$clr-primary});
     padding-block-end: 30px;
     border-block-end: 2px solid var(--clr-primary, #{variables.$clr-primary});
   }
