@@ -20,6 +20,7 @@
   background-color: #ffffff;
   appearance: none;
   cursor: pointer;
+  transition: all 100ms;
 }
 
 .radio-field__input::before {
@@ -31,7 +32,7 @@
   block-size: 16px;
 
   border-radius: 50%;
-  background-color: var(--clr-primary, #{variables.$clr-primary});
+  transition: all 100ms;
 }
 
 .radio-field__input:checked {
@@ -40,14 +41,15 @@
 
 .radio-field__input:checked::before {
   display: block;
-}
-
-.radio-field__input:focus-visible {
-  outline: transparent;
+  background-color: var(--clr-primary, #{variables.$clr-primary});
 }
 
 .radio-field__input:is(:hover, :focus-visible) {
   border-color: var(--clr-primary-lighter, #{variables.$clr-primary-lighter});
+}
+
+.radio-field__input:focus-visible {
+  outline: transparent;
 }
 
 .radio-field__input:is(:hover, :focus-visible)::before {

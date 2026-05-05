@@ -65,6 +65,7 @@
 .contacts__phone {
   text-decoration: none;
   color: inherit;
+  transition: all 100ms;
 }
 
 .contacts__phone:is(:hover, :focus-visible) {

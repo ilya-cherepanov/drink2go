@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .advantages {
-  --content-width: calc(var(--mobile-width, #{variables.$mobile-width}) - var(--mobile-padding, #{variables.$mobile-padding}) * 2);
+  --content-width: var(--content-mobile-width, #{variables.$content-mobile-width});
   padding-block: 50px 45px;
 }
 
@@ -29,7 +29,7 @@
 
 @media (min-width: #{variables.$tablet-width}) {
   .advantages {
-    --content-width: calc(var(--tablet-width, #{variables.$tablet-width}) - var(--tablet-padding, #{variables.$tablet-padding}) * 2);
+    --content-width: var(--content-tablet-width, #{variables.$content-tablet-width});
     padding-block: 60px 84px;
   }
 
@@ -51,7 +51,7 @@
 
 @media (min-width: #{variables.$desktop-width}) {
   .advantages {
-    --content-width: calc(var(--desktop-width, #{variables.$desktop-width}) - var(--desktop-padding, #{variables.$desktop-padding}) * 2);
+    --content-width: var(--content-desktop-width, #{variables.$content-desktop-width});
     padding-block: 100px 104px;
   }
 

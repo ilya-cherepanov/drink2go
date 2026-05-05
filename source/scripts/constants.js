@@ -5,7 +5,7 @@ export const NavButtonLabel = Object.freeze({
 
 export const Price = Object.freeze({
   Min: 0,
-  Max: 999,
+  Max: 980,
 });
 export const DEFAULT_MAX_PRICE = 900;
 

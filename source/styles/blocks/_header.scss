@@ -52,6 +52,7 @@
   text-transform: uppercase;
   color: var(--clr-base-font, #{variables.$clr-base-font});
   cursor: pointer;
+  transition: all 100ms;
 }
 
 .header__action::before {
@@ -67,6 +68,7 @@
   background-color: var(--clr-black, #{variables.$clr-black});
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 100ms;
 }
 
 .header__action:is(:hover, :focus-visible) {
