@@ -116,6 +116,10 @@
     display: block;
   }
 
+  .header__logo {
+    margin-inline-end: 20px;
+  }
+
   .header__container {
     inline-size: var(--tablet-width, #{variables.$tablet-width});
     padding-inline: 20px;
@@ -126,6 +130,12 @@
     position: static;
     display: flex;
     margin-inline-start: 5px;
+  }
+
+  .header__actions {
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-inline-start: 20px;
   }
 
   .header__action {
@@ -155,12 +165,16 @@
     padding-inline: 40px;
   }
 
+  .header__logo {
+    min-inline-size: 317px;
+  }
+
   .header__navigation {
     margin-inline-start: 0;
   }
 
   .header__actions {
-    gap: 20px;
+    column-gap: 20px;
   }
 
   .header__action {

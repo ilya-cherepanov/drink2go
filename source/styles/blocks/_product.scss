@@ -4,6 +4,7 @@
 .product {
   display: grid;
   grid-template-columns: 1fr 141px;
+  grid-template-rows: min-content min-content auto min-content;
   column-gap: 20px;
   padding-inline: 20px;
   padding-block: 40px 20px;
@@ -37,6 +38,8 @@
 
 .product__image {
   display: block;
+  inline-size: 100%;
+  object-fit: contain;
 }
 
 :is(.product__title-link, .product__image-link):is(:hover, :focus-visible) {
